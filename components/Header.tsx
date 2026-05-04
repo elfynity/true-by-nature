@@ -2,6 +2,7 @@ import Image from "next/image"
 import Logo from '@/public/true-by-nature-logo.svg'
 import Link from "next/link"
 
+
 export const Header = () => {
   return(
     <>

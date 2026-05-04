@@ -1,0 +1,11 @@
+#main p{
+  text-align:center;
+}
+
+#title h2{
+  margin:0;
+  text-align:center;
+  text-transform:uppercase;
+  font-size:var(--font-size-s);
+
+}

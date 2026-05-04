@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Nunito } from "next/font/google";
 import "./globals.css";
+import { TopBar } from "@/components/TopBar";
 import { Header } from "@/components/Header";
 import {Footer} from "@/components/Footer";
 import { SITE_NAME } from "@/lib/config";
@@ -42,11 +43,11 @@ export default function RootLayout({
 
 
         <div className="site">
-          <Header />
 
-          <div className="wrapper contentPadding">
-            {children}
-          </div>
+          <TopBar />
+          <Header />
+          {children}
+
         </div>{/* site */}  
 
 

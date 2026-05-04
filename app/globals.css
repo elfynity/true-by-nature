@@ -3,14 +3,22 @@
   :root {
     --dark-plum: #4B3D4D;
     --dusty-rose: #F4A7A9;
-    --sage-green: #B2B9AD;
-    --soft-grey: #CACACA;
-    --off-white: #F9F9F9;
+    --grey: #c0bdbc;
+ 
 
+    --green: #4B8324;
+    --dark-green: #4F5C42;
+    --ice-pink: #FDE0E2;
+    --pink: #FFA3A5;
+
+    --font-size-s:clamp(14px, 4vw, 16px); 
+    --line-height-s:clamp(18px, 4vw, 20px); 
     --font-size-r:clamp(16px, 4vw, 20px); 
     --line-height-r:clamp(20px, 4vw, 26px); 
+    --font-size-m:clamp(18px, 4vw, 20px); 
+    --line-height-m:clamp(22px, 4vw, 24px); 
     --font-size-ml:clamp(20px, 4vw, 22px); 
-    --line-height-ml:clamp(22px, 4vw, 26px);  
+    --line-height-ml:clamp(24px, 4vw, 26px);  
     --take-a-break:30px; 
 
     --font-family-nunito: var(--font-nunito);
@@ -29,7 +37,7 @@
   body {
     margin:0;
     padding:0;
-    background-color: var(--sage-green);
+    background-color: var(--grey);
     color:var(--dark-plum);
     font-family: var(--font-family-nunito);
 
@@ -62,23 +70,24 @@
  
   }
 
-  header{
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap:20px;
-    padding:10px 0;
-   
-  }
+
 
   .wrapper{
     max-width:1200px;
     margin:0 auto;
   }
 
+  .text-wrapper{
+    max-width:700px;
+    margin:0 auto;
+  }  
+
   .contentPadding{
     padding:50px 0;
+  }
+
+  .ice-pink-bg{
+    background-color: var(--ice-pink);
   }
 
   img#bgEdge, 
@@ -91,7 +100,7 @@
   }
 
   img#bgEdge{
-    width: 250px;
+    width: 300px;
     left:0;
     top:0;
   }
@@ -102,22 +111,65 @@
     bottom:0;
   }
 
-  nav{
-    display: flex;
+
+  #topBarContainer{
+    background-color: var(--dark-green);
+    color:white;
+    padding:10px 0;
+    position: relative;
+    z-index:3;
+  }
+
+  #topBar {
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+  }
+
+  #topBar  p{
+    margin:0;
+  }
+
+  #topIcons{
+    display:flex;
+    align-items:center;
     gap:15px;
   }
 
+  img.topIcons{
+    filter: brightness(0) saturate(100%) invert(99%) sepia(36%) saturate(2307%) hue-rotate(289deg) brightness(109%) contrast(107%);
+  }
+
+
+  header{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+    padding:10px 0;
+   
+  } 
+
+  nav{
+    display: flex;
+    gap:25px;
+  }
+
   nav a{
-    background-color: var(--off-white);
+    background-color: var(--ice-pink);
     border-radius:15px;
-    padding:5px 20px;
+    padding:10px 25px;
     color:black;
     font-weight:600;
-    font-size:var(--font-size-ml);
+    font-size:var(--font-size-r);
+    line-height:var(--font-size-r);
+    text-transform: uppercase;
   }
 
   nav a:hover{
-    color:var(--dusty-rose);
+    background-color:white;
+
   }
 
   #copyright{
